@@ -1,0 +1,26 @@
+{
+  "name": "sparkgen",
+  "version": "0.1.0",
+  "description": "Quick file generator",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:index": "npx webpack --config index.config.js",
+    "build:cli": "npx webpack --config cli.config.js",
+    "build": "npm run build:index && npm run build:cli",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "bin": {
+    "sparkgen": "./dist/cli.js"
+  },
+  "author": "Noah Callaway",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "np": "^5.2.1",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10"
+  }
+}
